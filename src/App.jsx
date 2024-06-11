@@ -2,7 +2,6 @@ import Header from './components/Header';
 import UserInput from "./components/UserInput.jsx";
 import OutputTable from "./components/OutputTable.jsx";
 import {useState} from "react";
-import {calculateInvestmentResults} from "./util/investment.js";
 
 function App() {
   const [input, setInput] = useState({
