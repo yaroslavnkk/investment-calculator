@@ -15,17 +15,16 @@ function App() {
     setInput(prevInput =>{
       return {
         ...prevInput,
-        [inputIdentifier]: value
+        [inputIdentifier]: +value,
       }
     });
   }
-  const userData = calculateInvestmentResults(input);
   return (
       <>
         <Header/>
         <main>
           <UserInput inputData = {input} onChangeData = {handleInputChange} />
-          <OutputTable data={userData}/>
+          {input.duration > 1 ?  <OutputTable data={input}/> : <p className="center">Too small amount of duration!</p>}
         </main>
       </>
   )
